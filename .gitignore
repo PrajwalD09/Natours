@@ -10,7 +10,7 @@ package-lock.json
 
 # controllers
 # models
-routes
+# routes
 utils
 views
 # *.js
