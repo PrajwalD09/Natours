@@ -1,0 +1,26 @@
+node_modules/
+*.env
+.cache/
+.prettierrc
+package.json
+package-lock.json
+.eslintrc.json
+.vscode
+# dev-data
+
+controllers
+models
+routes
+utils
+views
+*.js
+public
+*.css
+*.svg
+*.png
+*.jpg
+*.pug
+dev-data/templates
+dev-data/img
+dev-data\img
+# dev-data/data  
