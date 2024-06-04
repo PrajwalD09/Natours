@@ -13,7 +13,7 @@ models
 routes
 utils
 views
-*.js
+# *.js
 public
 *.css
 *.svg
