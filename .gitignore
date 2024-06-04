@@ -9,7 +9,7 @@ package-lock.json
 # dev-data
 
 # controllers
-models
+# models
 routes
 utils
 views
