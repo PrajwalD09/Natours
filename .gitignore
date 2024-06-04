@@ -11,7 +11,7 @@ package-lock.json
 # controllers
 # models
 # routes
-utils
+# utils
 views
 # *.js
 public
