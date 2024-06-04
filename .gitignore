@@ -14,7 +14,10 @@ package-lock.json
 # utils
 views
 # *.js
-public
+# public
+public/img
+public/js
+public/css
 *.css
 *.svg
 *.png
