@@ -12,7 +12,7 @@ dotenv.config({ path: './config.env' }); // will read our variables from file an
 
 const app = require('./app');
 
-/* ATLAS DATABASE
+// ATLAS DATABASE
 
 const DB = process.env.DATABASE_ATLAS.replace(
   '<PASSWORD>',
@@ -23,30 +23,30 @@ mongoose
   .connect(DB, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useUnifiedTopology: true
   })
   .then(con => {
     console.log('ATLAS DATABASE - Connected successfully');
     console.log(con.connections);
   });
 
-  */
 
 // LOCAL DATABASE
 
-mongoose
-  .connect(process.env.DATABASE_LOCAL, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true
-  })
-  // eslint-disable-next-line no-unused-vars
-  .then(con => {
-    console.log('LOCAL DATABASE - Connected successfully');
-    // console.log(con.connections);
-  })
-  .catch(err => console.log('DB connection error:', err));
+// mongoose
+//   .connect(process.env.DATABASE_LOCAL, {
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useFindAndModify: false,
+//     useUnifiedTopology: true
+//   })
+//   // eslint-disable-next-line no-unused-vars
+//   .then(con => {
+//     console.log('LOCAL DATABASE - Connected successfully');
+//     // console.log(con.connections);
+//   })
+//   .catch(err => console.log('DB connection error:', err));
 
 // SERVER
 const port = process.env.PORT || 3000;
