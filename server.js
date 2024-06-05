@@ -40,7 +40,7 @@ mongoose
     useCreateIndex: true,
     useFindAndModify: false,
     useUnifiedTopology: true,
-    connectTimeoutMS: 10000,
+    connectTimeoutMS: 20000,
     socketTimeoutMS: 45000
   })
   // eslint-disable-next-line no-unused-vars
