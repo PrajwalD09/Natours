@@ -30,7 +30,10 @@ mongoose
     console.log('ATLAS DATABASE - Connected successfully');
     // console.log(con.connections);
   })
-  .catch(err => console.log('DB connection error:', err));
+  .catch(err => {
+    console.log('DB connection error:', err);
+    setTimeout(connectWithRetry, 5000);
+  });
 
 // LOCAL DATABASE
 
