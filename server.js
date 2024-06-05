@@ -47,7 +47,7 @@ mongoose
   .then(con => {
     console.log('LOCAL DATABASE - Connected successfully');
     // console.log(con.connections);
-  });
+  }).catch(err => console.log('DB connection error:', err));;
 
 // SERVER
 const port = process.env.PORT || 3000;
