@@ -39,7 +39,9 @@ mongoose
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    connectTimeoutMS: 10000,
+    socketTimeoutMS: 45000
   })
   // eslint-disable-next-line no-unused-vars
   .then(con => {
