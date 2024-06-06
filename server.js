@@ -14,39 +14,39 @@ const app = require('./app');
 
 // ATLAS DATABASE
 
-const DB = process.env.DATABASE_ATLAS.replace(
-  '<PASSWORD>',
-  process.env.DATABASE_PASSWORD
-);
-
-mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true
-  })
-  .then(con => {
-    console.log('ATLAS DATABASE - Connected successfully');
-    console.log(con.connections);
-  });
-
-
-// LOCAL DATABASE
+// const DB = process.env.DATABASE_ATLAS.replace(
+//   '<PASSWORD>',
+//   process.env.DATABASE_PASSWORD
+// );
 
 // mongoose
-//   .connect(process.env.DATABASE_LOCAL, {
+//   .connect(DB, {
 //     useNewUrlParser: true,
 //     useCreateIndex: true,
 //     useFindAndModify: false,
 //     useUnifiedTopology: true
 //   })
-//   // eslint-disable-next-line no-unused-vars
 //   .then(con => {
-//     console.log('LOCAL DATABASE - Connected successfully');
-//     // console.log(con.connections);
-//   })
-//   .catch(err => console.log('DB connection error:', err));
+//     console.log('ATLAS DATABASE - Connected successfully');
+//     console.log(con.connections);
+//   });
+
+
+// LOCAL DATABASE
+
+mongoose
+  .connect(process.env.DATABASE_LOCAL, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  })
+  // eslint-disable-next-line no-unused-vars
+  .then(con => {
+    console.log('LOCAL DATABASE - Connected successfully');
+    // console.log(con.connections);
+  })
+  .catch(err => console.log('DB connection error:', err));
 
 // SERVER
 const port = process.env.PORT || 3000;
