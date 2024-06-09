@@ -55,7 +55,8 @@ exports.signUp = catchAsync(async (req, res, next) => {
 });
 
 exports.login = async (req, res, next) => {
-  const { email, password } = { ...req.body };
+  // const { email, password } = { ...req.body };
+  const { email, password } = req.body;
 
   // 1) Check if email and password exits
   if (!email || !password) {
