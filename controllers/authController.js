@@ -19,8 +19,9 @@ const createSendToken = (user, statusCode, res) => {
     expires: new Date(
       Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
     ),
-    httpOnly: true //cookie will not be modified or accessed by browser
-    cookieOptions.secure = true;
+    samesite: true,
+    httpOnly: true, //cookie will not be modified or accessed by browser
+    secure: true;
   };
 
   // if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
